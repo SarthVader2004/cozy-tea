@@ -12,7 +12,7 @@ document.getElementById('submitBtn').addEventListener('click', async () => {
   output.innerHTML = "🍵 Brewing your perfect tea...";
 
   try {
-    const res = await fetch("http://localhost:5000/recommend", {
+    const res = await fetch("https://cozy-tea.onrender.com/recommend", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
