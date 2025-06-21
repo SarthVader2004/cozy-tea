@@ -1,0 +1,127 @@
+/* 🎨 Colors */
+:root {
+  --cozy-bg: #fdf6f0;
+  --cozy-dark: #4b2e2b;
+  --cozy-rose: #c89f94;
+  --cozy-cream: #f5ede2;
+  --cozy-accent: #d1a87b;
+  --cozy-peach: #fff0e6;
+}
+
+/* 🌿 Base Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comfortaa', cursive;
+  background-color: var(--cozy-bg);
+  color: var(--cozy-dark);
+}
+
+/* 🍂 Header */
+header {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.cozy-header {
+  font-family: 'Caveat', cursive;
+  font-size: 4rem;
+  margin: 0;
+}
+
+/* 📦 Container Layout */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 4rem;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+/* ✏️ Left Section */
+.left-section {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  padding: 1rem;
+  border: 2px solid var(--cozy-rose);
+  border-radius: 12px;
+  font-size: 1.1rem;
+  background-color: var(--cozy-cream);
+  resize: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+button {
+  align-self: flex-start;
+  background-color: var(--cozy-accent);
+  color: white;
+  font-size: 1rem;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+button:hover {
+  background-color: var(--cozy-rose);
+}
+
+.tea-output {
+  padding: 1rem;
+  background-color: var(--cozy-peach);
+  border-radius: 12px;
+  border: 1.5px dashed var(--cozy-dark);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  font-size: 1rem;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+/* 🍵 Right Section */
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tea-img {
+  max-width: 320px;
+  height: auto;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .tea-img {
+    width: 240px;
+    margin-top: 2rem;
+  }
+
+  button {
+    align-self: center;
+  }
+}

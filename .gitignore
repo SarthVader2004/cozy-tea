@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.env
+
+# Environment & Secrets
+.env
+.env.*
+*.env.*
+secrets.env
+
+# macOS
+.DS_Store
+
+# Node/Vercel (just in case)
+node_modules/
+.vercel/
